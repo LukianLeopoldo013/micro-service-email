@@ -37,10 +37,10 @@ func TryCreate(db *sql.DB) {
 }
 
 func emailEntryFromRow(row *sql.Rows) (*EmailEntry, error) {
-	var id int64
-	var email string
+	var id 			int64
+	var email 		string
 	var confirmedAt int64
-	var optOut bool
+	var optOut 		bool
 
 	err := row.Scan(&id, &email, &confirmedAt, &optOut)
 
